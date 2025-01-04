@@ -154,6 +154,7 @@
   background-image: none;
   font-weight: 700;
   line-height: 1;
+  font-size: 2.8125rem;
   padding: 0;
 }
 
@@ -203,10 +204,6 @@
 
   .u-section-2 .u-layout-cell-1 {
     min-height: 501px;
-  }
-
-  .u-section-2 .u-btn-1 {
-    font-size: 2.8125rem;
   }
 
   .u-section-2 .u-text-2 {
@@ -569,6 +566,7 @@
   background-image: none;
   font-weight: 700;
   line-height: 1;
+  font-size: 2.8125rem;
   padding: 0;
 }
 
@@ -618,10 +616,6 @@
   .u-section-4 .u-text-1 {
     margin-right: 0;
     margin-left: 0;
-  }
-
-  .u-section-4 .u-btn-1 {
-    font-size: 2.8125rem;
   }
 
   .u-section-4 .u-text-2 {
