@@ -70,12 +70,7 @@
 }
 
 @media (max-width: 575px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 312px;
-  }
-
   .u-section-1 .u-gallery-1 {
-    height: 290px;
     margin-top: 11px;
     margin-bottom: 11px;
     margin-right: initial;
@@ -83,12 +78,12 @@
     width: auto;
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 255px;
+  min-height: 257px;
 }
 
 .u-section-2 .u-text-1 {
   font-weight: 500;
-  margin: 27px 15px;
+  margin: 14px 15px;
 }
 
 .u-section-2 .u-btn-1 {
@@ -115,7 +110,5 @@
 
   .u-section-2 .u-text-1 {
     width: auto;
-    margin-top: 23px;
-    margin-bottom: 23px;
   }
 }
