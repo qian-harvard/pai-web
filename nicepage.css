@@ -1091,10 +1091,16 @@ ol {
 }
 .u-text a,
 .u-post-content a,
-.u-tab-item a,
-.u-nav-item a,
-.u-filter-item a,
 .u-product-control.u-text a {
+  font-size: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+}
+.u-filter-item a,
+.u-nav-link,
+.u-tab-link {
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
@@ -7776,7 +7782,9 @@ ul.u-text li:last-child {
 .u-invisible {
   visibility: hidden;
 }
-.u-border-none {
+.u-border-none:not([class*="u-border-hover-"]):not([class*="u-border-active-"]),
+.u-border-none:not(:hover):not(.hover)[class*="u-border-hover-"],
+.u-border-none:not(:active):not(.active)[class*="u-border-active-"] {
   border-width: 0 !important;
 }
 .u-outline-none {
@@ -15351,6 +15359,7 @@ section.u-image:not(.u-hover-box),
 }
 .u-file-icon img {
   object-fit: contain;
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -18207,12 +18216,6 @@ div.u-video,
   overflow: hidden;
   width: 0;
 }
-.u-enable-responsive.prevent-animation {
-  transform: none !important;
-  opacity: 1 !important;
-  will-change: auto !important;
-  filter: none !important;
-}
 .u-enable-responsive .menu-collapse {
   display: block;
 }
@@ -19075,6 +19078,23 @@ img.u-opacity-0,
 .u-opacity-0.u-menu-overlay {
   opacity: 0;
 }
+.u-opacity-var:before,
+section.u-opacity-var:before,
+.u-hover-box > .u-opacity-var.u-container-layout:before,
+.u-opacity-var > .u-container-layout:before,
+.u-opacity-var > .u-audio-main-layout-wrapper:before,
+.u-opacity-var > .u-inner-container-layout:before,
+.u-opacity-var.u-sidenav:before {
+  opacity: var(--opacity);
+}
+a.u-opacity-var,
+span.u-opacity-var,
+img.u-opacity-var,
+.u-opacity-var.u-line,
+.u-opacity-var.u-shape,
+.u-opacity-var.u-menu-overlay {
+  opacity: var(--opacity);
+}
 [class*="u-custom-color-"].u-body,
 [class*="u-palette-"].u-body,
 [class*="u-gray-"].u-body,
@@ -19105,6 +19125,10 @@ img.u-opacity-0,
 }
 .u-social-icons {
   display: flex;
+  min-width: -webkit-fit-content !important;
+  min-width: fit-content !important;
+  justify-content: space-between;
+  align-items: center;
 }
 .u-social-url {
   color: inherit;
@@ -19135,7 +19159,7 @@ img.u-opacity-0,
 .u-social-icons a {
   height: 100%;
   display: inline-block;
-  flex: 1;
+  flex: 0 0 fit-content;
 }
 .u-language {
   display: flex;
@@ -19252,8 +19276,11 @@ blockquote .small:before {
 .u-search {
   display: flex;
   flex-wrap: nowrap;
-  transition: width 0.25s ease;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  transition-property: width, margin-left, margin-right;
   --open-width: fit-content;
+  --open-duration: 0.25s;
   --overlay-color: white;
   --overlay-contrast-color: #333;
 }
@@ -19302,9 +19329,6 @@ blockquote .small:before {
 .u-search input::placeholder {
   font-family: inherit;
 }
-.u-search-icon {
-  box-sizing: content-box;
-}
 .u-search-left .u-search-icon[class*="u-border-"] {
   margin-right: 0.8em;
 }
@@ -19349,6 +19373,16 @@ blockquote .small:before {
 .u-search-open-page.u-search-open {
   position: fixed;
 }
+.u-search-open-width.u-search-open-width-left.u-search-open {
+  margin-left: calc(var(--search-left) - var(--open-move-distance)) !important;
+}
+.u-search-open-width.u-search-open-width-right.u-search-open {
+  margin-right: calc(var(--search-right) - var(--open-move-distance)) !important;
+}
+.u-search-open-width.u-search-open-width-both.u-search-open {
+  margin-left: calc(var(--search-left) - var(--open-move-distance) / 2) !important;
+  margin-right: calc(var(--search-right) - var(--open-move-distance) / 2) !important;
+}
 .u-search-overlay {
   display: none;
   top: 0;
@@ -19357,7 +19391,8 @@ blockquote .small:before {
   right: 0;
   cursor: default;
   background-color: var(--overlay-color);
-  transition: background-color 0.25s ease;
+  transition: opacity var(--open-duration) ease;
+  opacity: 0;
 }
 .u-search-overlay .close {
   position: absolute;
@@ -19481,6 +19516,7 @@ blockquote .small:before {
 .u-sorting {
   position: relative;
   min-width: 255px;
+  color: #000000;
 }
 .u-sorting-left .u-sorting {
   margin-left: 0 !important;
@@ -19644,6 +19680,7 @@ aside .u-categories.u-categories-vertical ul {
   position: relative;
   min-width: 255px;
   margin-right: auto;
+  color: #000000;
 }
 .u-categories-listbox select {
   height: 100%;
@@ -21974,6 +22011,12 @@ a.pswp__share--download:hover {
   
   --animation-custom_in-translate_y: -50% !important;
 }
+.u-prevent-animation {
+  transform: none !important;
+  opacity: 1 !important;
+  will-change: auto !important;
+  filter: none !important;
+}
 .u-animation-sticky {
   position: sticky;
   top: 0;
@@ -22280,6 +22323,7 @@ a.pswp__share--download:hover {
   border-top: none;
   border-left: none;
   border-right: none;
+  margin: 0;
 }
 .u-tabs .u-tab-link {
   display: block;
@@ -22587,7 +22631,6 @@ a.pswp__share--download:hover {
 }
 .u-layout-horizontal {
   position: relative;
-  overflow: hidden;
 }
 .u-layout-horizontal .u-repeater,
 .u-layout-horizontal .u-gallery-inner {
@@ -22759,6 +22802,7 @@ a.pswp__share--download:hover {
   position: relative;
   width: 100%;
   height: 100%;
+  isolation: isolate;
 }
 .u-shopping-cart-count {
   position: absolute;
@@ -23326,7 +23370,7 @@ span.product-remove:after {
 .iti {
   position: relative;
   display: inline-block;
-  width: inherit;
+  width: 100%;
 }
 .iti .iti__flag-container ul {
   margin: 0 0 0 -1px;
@@ -24588,6 +24632,7 @@ span.product-remove:after {
   --year-month-top-right-border-radius: unset;
   --year-month-bottom-left-border-radius: unset;
   --year-month-bottom-right-border-radius: unset;
+  
   --days-text-color: unset;
   --days-text-default-color: unset;
   --days-border-color: unset;
@@ -24707,6 +24752,12 @@ span.product-remove:after {
     margin-left: auto;
     margin-right: auto;
   }
+}
+.u-calendar .qs-squares {
+  gap: 0px;
+}
+.u-calendar .qs-square {
+  width: calc((100% - 0px * 6) / 7);
 }
 .u-calendar .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
   background-color: var(--num-hover-color);
@@ -24880,8 +24931,10 @@ span.product-remove:after {
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  height: 25%;
-  padding: 5%;
+  min-height: 15%;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
 }
 .u-calendar .u-calendar-error-message,
 .u-calendar .u-calendar-conflict-message,
