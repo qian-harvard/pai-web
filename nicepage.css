@@ -19152,6 +19152,10 @@ img.u-opacity-var,
   display: flex;
   height: 100% !important;
 }
+.u-social-icons .u-icon .u-svg-link {
+  width: unset;
+  flex: 1 0 auto;
+}
 .u-social-icons .u-social-url,
 .u-social-icons .u-social-url:hover {
   color: currentColor;
@@ -45152,18 +45156,14 @@ a.u-link.u-text-hover-grey-90:hover {
 
 
 /*end-variables sitestylecss*/
- .u-header {
-  background-image: none;
-}
-
 .u-header .u-sheet-1 {
-  min-height: 158px;
+  min-height: 187px;
 }
 
 .u-header .u-image-1 {
-  width: 488px;
-  height: 139px;
-  margin: 48px auto 0 11px;
+  width: 448px;
+  height: 128px;
+  margin: 59px auto 0 0;
 }
 
 .u-header .u-logo-image-1 {
@@ -45179,7 +45179,6 @@ a.u-link.u-text-hover-grey-90:hover {
   font-weight: 700;
   font-size: 1.0625rem;
   text-transform: uppercase;
-  letter-spacing: normal;
 }
 
 .u-header .u-nav-2 {
@@ -45187,8 +45186,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 1199px) {
   .u-header .u-image-1 {
-    width: 488px;
-    height: 139px;
+    width: 448px;
+    height: 128px;
   }
 
   .u-header .u-menu-1 {
@@ -45204,7 +45203,6 @@ a.u-link.u-text-hover-grey-90:hover {
     width: 261px;
     height: 79px;
     margin-top: 60px;
-    margin-left: 0;
   }
 
   .u-header .u-menu-1 {
