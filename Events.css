@@ -287,13 +287,13 @@
     margin-bottom: 0;
   }
 }.u-section-3 .u-sheet-1 {
-  min-height: 140px;
+  min-height: 138px;
 }
 
 .u-section-3 .u-list-1 {
   grid-template-rows: repeat(1, auto);
   width: 740px;
-  margin: 0 auto;
+  margin: -1px auto 0;
 }
 
 .u-section-3 .u-repeater-1 {
