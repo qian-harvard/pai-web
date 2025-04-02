@@ -93,6 +93,12 @@
 
   .u-section-1 .u-group-1 {
     width: 340px;
+    min-height: 327px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    padding-right: 48px;
+    padding-left: 47px;
   }
 } .u-section-2 {
   background-image: none;
