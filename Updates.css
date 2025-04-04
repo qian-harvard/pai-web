@@ -59,6 +59,11 @@
   padding: 0;
 }
 
+.u-section-1 .u-btn-3 {
+  background-image: none;
+  padding: 0;
+}
+
 .u-section-1 .u-list-item-2 {
   --radius: 50px;
   margin-top: 0;
@@ -86,7 +91,7 @@
   margin: -234px 69px 0 242px;
 }
 
-.u-section-1 .u-btn-3 {
+.u-section-1 .u-btn-4 {
   background-image: none;
   padding: 0;
 }
