@@ -141,7 +141,8 @@
   grid-template-columns: repeat(1, 100%);
   min-height: 504px;
   margin-left: auto;
-  grid-gap: 0px;
+  --gap: 0px;
+  grid-auto-columns: 100%;
 }
 
 .u-section-2 .u-list-item-1 {
@@ -209,6 +210,7 @@
 
 .u-section-2 .u-gallery-inner-1 {
   grid-template-columns: repeat(2, auto);
+  --gap: 0px;
 }
 
 .u-section-2 .u-gallery-item-1 {
@@ -278,6 +280,7 @@
 
   .u-section-2 .u-repeater-1 {
     grid-template-columns: 100%;
+    grid-gap: 0px;
   }
 
   .u-section-2 .u-layout-cell-2 {
