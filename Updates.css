@@ -12,6 +12,65 @@
   margin: 0 11px 36px auto;
 }
 
+/* Newsletter Section */
+.u-section-newsletter {
+  background-color: #f2f2f2;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.u-section-newsletter .u-sheet-1 {
+  min-height: auto;
+}
+
+.u-section-newsletter h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.u-section-newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.u-section-newsletter input[type="email"] {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.u-section-newsletter button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #478ac9;
+  /* Using palette-1-base color */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.u-section-newsletter button:hover {
+  background-color: #386e9f;
+}
+
+@media (max-width: 575px) {
+  .u-section-newsletter input[type="email"] {
+    width: 100%;
+  }
+}
+
+
 .u-section-1 .u-repeater-1 {
   grid-template-columns: repeat(1, 100%);
   min-height: 149px;

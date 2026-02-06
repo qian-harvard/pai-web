@@ -2,6 +2,7 @@
 <html style="font-size: 16px;" lang="en">
 
 <head>
+  <link rel="icon" href="images/PAI.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta name="keywords"
@@ -111,6 +112,37 @@
       </nav>
     </div>
   </header>
+  <!-- Newsletter Subscription Section -->
+  <section class="u-clearfix u-section-newsletter" id="newsletter">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h2 class="u-text u-text-center">Subscribe to Our Newsletter for Updates and Announcements</h2>
+      <form
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdYBVT6hiU_3ehsMt3HnyPuEsy7hMc9nbN7t0_Ki9fFA6AEyA/formResponse"
+        method="POST" target="hidden_iframe" onsubmit="submitNewsletter(event)">
+        <input type="email" name="entry.972844626" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletter-message" style="display: none; margin-top: 15px; font-weight: 600;"></p>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    </div>
+  </section>
+  <script>
+    function submitNewsletter(event) {
+      const form = event.target;
+      const message = document.getElementById('newsletter-message');
+      
+      setTimeout(function() {
+        form.reset();
+        message.textContent = 'Thank you for subscribing!';
+        message.style.color = '#478ac9';
+        message.style.display = 'block';
+        
+        setTimeout(function() {
+          message.style.display = 'none';
+        }, 5000);
+      }, 500);
+    }
+  </script>
   <section class="u-clearfix u-section-1" id="sec-0cc5">
     <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-sheet-1">
       <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
