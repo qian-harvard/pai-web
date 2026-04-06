@@ -41,20 +41,12 @@
         <div class="research-hero__content">
           <p class="eyebrow">Research</p>
           <h1>Five directions shaping AI infrastructure, power systems, and policy strategy</h1>
-          <p class="research-hero__lead">PAI studies how large-scale AI systems should be scheduled, powered, modeled, and governed, linking LLM runtimes and data center operations to grid intelligence and public policy.</p>
+          <p class="research-hero__lead">PAI&rsquo;s research spans 13 projects in efficient LLM scheduling, energy-aware computation, data center dynamics, grid foundation models, and electricity strategy.</p>
         </div>
-        <div class="research-hero__panel" aria-labelledby="research-focus-title">
-          <p class="research-hero__panel-label" id="research-focus-title">Focus areas</p>
-          <ol class="research-hero__directions">
-            <li>Efficient LLM Scheduling</li>
-            <li>Energy-Efficient LLM Training and Inference</li>
-            <li>Adaptive Modeling of Data Center Dynamics</li>
-            <li>Foundation Models for Power Systems</li>
-            <li>Electricity and Data Centers Policy Brief and Strategy</li>
-          </ol>
+        <div class="research-hero__panel">
           <article class="research-hero__highlight" aria-label="Open-source community maintained by PAI">
             <div class="research-hero__highlight-body">
-              <p class="research-hero__highlight-label">Open-Source Community Maintained by PAI</p>
+              <p class="research-hero__highlight-label">Open-Source Community Maintained by PAI: PowerAgent</p>
               <p class="research-hero__highlight-copy">PowerAgent is PAI&rsquo;s open-source community for agentic intelligence in power systems, spanning foundation models, tool interfaces, and workflow design.</p>
               <a class="research-hero__highlight-link" href="https://poweragent.seas.harvard.edu/" target="_blank" rel="noopener noreferrer">poweragent.seas.harvard.edu</a>
               <img class="research-hero__highlight-logo" src="images/poweragent_logo.png" alt="PowerAgent logo">
@@ -66,51 +58,62 @@
 
     <nav class="research-index" aria-label="Research directions">
       <div class="shell">
-        <ol class="research-index__list">
-          <li>
-            <a href="#efficient-llm-scheduling">
-              <span class="research-index__number">01</span>
-              <span class="research-index__title">Efficient LLM Scheduling</span>
-              <span class="research-index__detail">Latency, memory, orchestration</span>
-            </a>
-          </li>
-          <li>
-            <a href="#energy-efficient-llm-training-and-inference">
-              <span class="research-index__number">02</span>
-              <span class="research-index__title">Energy-Efficient LLM Training and Inference</span>
-              <span class="research-index__detail">Resilience and grid-aware inference</span>
-            </a>
-          </li>
-          <li>
-            <a href="#adaptive-modeling-of-data-center-dynamics">
-              <span class="research-index__number">03</span>
-              <span class="research-index__title">Adaptive Modeling of Data Center Dynamics</span>
-              <span class="research-index__detail">Control, stability, dynamic interaction</span>
-            </a>
-          </li>
-          <li>
-            <a href="#foundation-models-for-power-systems">
-              <span class="research-index__number">04</span>
-              <span class="research-index__title">Foundation Models for Power Systems</span>
-              <span class="research-index__detail">Agents, forecasting, scaling laws</span>
-            </a>
-          </li>
-          <li>
-            <a href="#electricity-and-data-centers-policy-brief-and-strategy">
-              <span class="research-index__number">05</span>
-              <span class="research-index__title">Electricity and Data Centers Policy Brief and Strategy</span>
-              <span class="research-index__detail">Grid planning and regulatory design</span>
-            </a>
-          </li>
-        </ol>
+        <div class="research-index__groups">
+          <section class="research-index__group" aria-labelledby="research-index-ai-for-power">
+            <div class="research-index__group-head">
+              <h2 class="research-index__group-title" id="research-index-ai-for-power">AI for Power</h2>
+            </div>
+            <ol class="research-index__list research-index__list--single">
+              <li>
+                <a href="#foundation-models-for-power-systems">
+                  <span class="research-index__title">Foundation Models for Power Systems</span>
+                  <span class="research-index__detail">Agents, forecasting, scaling laws</span>
+                </a>
+              </li>
+            </ol>
+          </section>
+
+          <section class="research-index__group" aria-labelledby="research-index-power-for-ai">
+            <div class="research-index__group-head">
+              <h2 class="research-index__group-title" id="research-index-power-for-ai">Power for AI</h2>
+            </div>
+            <ol class="research-index__list">
+              <li>
+                <a href="#efficient-llm-scheduling">
+                  <span class="research-index__title">Efficient LLM Scheduling</span>
+                  <span class="research-index__detail">Latency, memory, orchestration</span>
+                </a>
+              </li>
+              <li>
+                <a href="#energy-efficient-llm-training-and-inference">
+                  <span class="research-index__title">Energy-Efficient LLM Training and Inference</span>
+                  <span class="research-index__detail">Resilience and grid-aware inference</span>
+                </a>
+              </li>
+              <li>
+                <a href="#adaptive-modeling-of-data-center-dynamics">
+                  <span class="research-index__title">Adaptive Modeling of Data Center Dynamics</span>
+                  <span class="research-index__detail">Control, stability, dynamic interaction</span>
+                </a>
+              </li>
+              <li>
+                <a href="#electricity-and-data-centers-policy-brief-and-strategy">
+                  <span class="research-index__title">Electricity and Data Centers Policy Brief and Strategy</span>
+                  <span class="research-index__detail">Grid planning and regulatory design</span>
+                </a>
+              </li>
+            </ol>
+          </section>
+        </div>
       </div>
     </nav>
 
-    <section class="research-chapter" id="efficient-llm-scheduling">
+    <section class="research-chapter research-chapter--power-for-ai" id="efficient-llm-scheduling">
       <div class="shell research-chapter__layout">
         <aside class="research-chapter__rail">
           <p class="research-chapter__number">01</p>
-          <p class="research-chapter__eyebrow">Direction</p>
+          <p class="research-chapter__direction research-chapter__direction--power-for-ai">Power for AI</p>
+          <p class="research-chapter__eyebrow">Subtopic</p>
           <h2 class="research-chapter__title">Efficient LLM Scheduling</h2>
           <p class="research-chapter__summary">Scheduling policies that reduce latency, manage memory pressure, and improve reasoning efficiency across modern LLM serving systems.</p>
           <p class="research-chapter__count">4 projects</p>
@@ -167,11 +170,12 @@
       </div>
     </section>
 
-    <section class="research-chapter research-chapter--tinted" id="energy-efficient-llm-training-and-inference">
+    <section class="research-chapter research-chapter--tinted research-chapter--power-for-ai" id="energy-efficient-llm-training-and-inference">
       <div class="shell research-chapter__layout">
         <aside class="research-chapter__rail">
           <p class="research-chapter__number">02</p>
-          <p class="research-chapter__eyebrow">Direction</p>
+          <p class="research-chapter__direction research-chapter__direction--power-for-ai">Power for AI</p>
+          <p class="research-chapter__eyebrow">Subtopic</p>
           <h2 class="research-chapter__title">Energy-Efficient LLM Training and Inference</h2>
           <p class="research-chapter__summary">Runtime systems that keep large-model training resilient under interruptions and make inference more responsive to electricity availability.</p>
           <p class="research-chapter__count">2 projects</p>
@@ -204,11 +208,12 @@
       </div>
     </section>
 
-    <section class="research-chapter" id="adaptive-modeling-of-data-center-dynamics">
+    <section class="research-chapter research-chapter--power-for-ai" id="adaptive-modeling-of-data-center-dynamics">
       <div class="shell research-chapter__layout">
         <aside class="research-chapter__rail">
           <p class="research-chapter__number">03</p>
-          <p class="research-chapter__eyebrow">Direction</p>
+          <p class="research-chapter__direction research-chapter__direction--power-for-ai">Power for AI</p>
+          <p class="research-chapter__eyebrow">Subtopic</p>
           <h2 class="research-chapter__title">Adaptive Modeling of Data Center Dynamics</h2>
           <p class="research-chapter__summary">Models and controls for data center dynamics, stability, and system interaction under fast-changing infrastructure and grid conditions.</p>
           <p class="research-chapter__count">3 projects</p>
@@ -253,11 +258,12 @@
       </div>
     </section>
 
-    <section class="research-chapter research-chapter--tinted" id="foundation-models-for-power-systems">
+    <section class="research-chapter research-chapter--tinted research-chapter--ai-for-power" id="foundation-models-for-power-systems">
       <div class="shell research-chapter__layout">
         <aside class="research-chapter__rail">
           <p class="research-chapter__number">04</p>
-          <p class="research-chapter__eyebrow">Direction</p>
+          <p class="research-chapter__direction research-chapter__direction--ai-for-power">AI for Power</p>
+          <p class="research-chapter__eyebrow">Subtopic</p>
           <h2 class="research-chapter__title">Foundation Models for Power Systems</h2>
           <p class="research-chapter__summary">Shared model interfaces, time-series forecasting, and data scaling studies that push foundation-model thinking deeper into grid operations.</p>
           <p class="research-chapter__count">3 projects</p>
@@ -302,11 +308,12 @@
       </div>
     </section>
 
-    <section class="research-chapter research-chapter--feature" id="electricity-and-data-centers-policy-brief-and-strategy">
+    <section class="research-chapter research-chapter--feature research-chapter--power-for-ai" id="electricity-and-data-centers-policy-brief-and-strategy">
       <div class="shell research-chapter__layout">
         <aside class="research-chapter__rail">
           <p class="research-chapter__number">05</p>
-          <p class="research-chapter__eyebrow">Direction</p>
+          <p class="research-chapter__direction research-chapter__direction--power-for-ai">Power for AI</p>
+          <p class="research-chapter__eyebrow">Subtopic</p>
           <h2 class="research-chapter__title">Electricity and Data Centers Policy Brief and Strategy</h2>
           <p class="research-chapter__summary">Engineering and policy analysis focused on how data-center growth should be integrated into the U.S. electric grid with more flexible and equitable rules.</p>
           <p class="research-chapter__count">1 project</p>
