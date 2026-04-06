@@ -1013,11 +1013,23 @@ select {
 }
 
 .page-home .page-hero__media {
-  align-items: center;
+  align-items: end;
+  align-content: end;
 }
 
 .page-home .hero-media {
-  min-height: 340px;
+  min-height: 0;
+  background: transparent;
+}
+
+.page-home .hero-media img {
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+}
+
+.page-home .hero-media::before {
+  display: none;
 }
 
 .home-research-preview {
