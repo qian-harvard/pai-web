@@ -567,6 +567,11 @@ select {
   text-wrap: balance;
 }
 
+.section-title--featured-seminar {
+  max-width: 28ch;
+  line-height: 1.08;
+}
+
 .section-title--wide {
   max-width: none;
 }
