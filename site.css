@@ -1221,6 +1221,8 @@ select {
     align-items: flex-start;
     gap: 0.5rem;
     padding: 1rem;
+    max-height: calc(100svh - 6rem);
+    overflow-y: auto;
     border-radius: 22px;
     border: 1px solid var(--border);
     background: rgba(255, 253, 249, 0.98);
@@ -1282,8 +1284,32 @@ select {
     padding-top: 4.4rem;
   }
 
+  .page-home .page-hero__grid,
+  .page-team .page-hero__grid {
+    gap: 1.4rem;
+  }
+
+  .page-home .page-hero__media {
+    width: min(100%, 520px);
+    margin-inline: auto;
+    justify-self: center;
+  }
+
+  .page-team .page-hero__media {
+    width: min(100%, 34rem);
+    margin-inline: auto;
+    justify-self: center;
+  }
+
   .home-research-preview__body {
     max-width: none;
+  }
+
+  .home-research-preview__groups,
+  .newsletter-inline,
+  .newsletter-inline__layout,
+  .page-team .person-grid {
+    gap: 1rem;
   }
 
   .home-research-group {
@@ -1321,6 +1347,15 @@ select {
     padding: 4rem 0 3.2rem;
   }
 
+  .page-hero__grid {
+    gap: 1.25rem;
+  }
+
+  .page-hero__content {
+    display: grid;
+    gap: 0.85rem;
+  }
+
   .page-hero h1 {
     font-size: clamp(1.9rem, 8vw, 2.75rem);
     max-width: none;
@@ -1332,6 +1367,37 @@ select {
 
   .lead {
     font-size: 1.08rem;
+    margin-top: 0;
+    max-width: none;
+  }
+
+  .page-home .page-hero {
+    padding: 3.35rem 0 2.8rem;
+  }
+
+  .page-team .page-hero {
+    padding-bottom: 2.9rem;
+  }
+
+  .page-home .hero-media {
+    width: min(100%, 420px);
+    margin-inline: auto;
+  }
+
+  .home-research-preview__intro {
+    gap: 0.8rem;
+  }
+
+  .home-research-group__title {
+    font-size: 1.28rem;
+  }
+
+  .home-research-link {
+    padding: 1rem 1rem 1.05rem;
+  }
+
+  .home-research-link__title {
+    font-size: 1.06rem;
   }
 
   .home-research-link {
@@ -1372,8 +1438,62 @@ select {
     max-width: none;
   }
 
+  .newsletter-form__field .button {
+    width: 100%;
+  }
+
   .site-footer__meta {
     white-space: normal;
+  }
+}
+
+@media (max-width: 560px) {
+  .button-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button-row > .button {
+    width: 100%;
+  }
+
+  .page-home .prose-block p {
+    font-size: 1rem;
+  }
+
+  .page-team .page-hero__media .card {
+    padding: 1.25rem;
+  }
+
+  .page-team .person-card {
+    display: grid;
+    grid-template-columns: minmax(96px, 32vw) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .page-team .person-card__photo {
+    height: 100%;
+    min-height: 172px;
+    aspect-ratio: auto;
+  }
+
+  .page-team .person-card__body {
+    padding: 1rem 1rem 1rem 0.95rem;
+    align-self: center;
+  }
+
+  .page-team .person-card__role {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .page-team .person-card__name {
+    font-size: 1.22rem;
+  }
+
+  .page-team .person-card__meta {
+    margin-top: 0.5rem;
+    font-size: 0.98rem;
   }
 }
 
