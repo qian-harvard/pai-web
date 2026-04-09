@@ -1037,11 +1037,33 @@ select {
 }
 
 .page-home .page-hero__grid {
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  grid-template-columns: 1fr;
 }
 
 .page-home .page-hero__content {
+  max-width: none;
+}
+
+.page-home .page-home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.page-home .page-home-hero__header,
+.page-home .page-home-hero__body {
+  grid-column: 1;
   max-width: 760px;
+}
+
+.page-home .page-home-hero__body {
+  display: grid;
+  align-content: start;
+}
+
+.page-home .page-home-hero__body .lead {
+  margin-top: 0;
 }
 
 .page-home .page-hero h1 {
@@ -1052,9 +1074,12 @@ select {
   max-width: 58ch;
 }
 
-.page-home .page-hero__media {
+.page-home .page-home-hero__media {
+  display: grid;
   align-items: end;
   align-content: end;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 .page-home .hero-media {
@@ -1289,10 +1314,22 @@ select {
     gap: 1.4rem;
   }
 
-  .page-home .page-hero__media {
+  .page-home .page-home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .page-home .page-home-hero__header,
+  .page-home .page-home-hero__body {
+    max-width: none;
+  }
+
+  .page-home .page-home-hero__media {
     width: min(100%, 520px);
     margin-inline: auto;
     justify-self: center;
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .page-team .page-hero__media {
@@ -1375,20 +1412,31 @@ select {
     padding: 3.35rem 0 2.8rem;
   }
 
-  .page-home .page-hero__content {
-    position: relative;
-    z-index: 1;
+  .page-home .page-home-hero {
+    grid-template-areas:
+      "header"
+      "media"
+      "body";
+    gap: 1.25rem;
   }
 
-  .page-home .page-hero__media {
-    order: 2;
+  .page-home .page-home-hero__header {
+    grid-area: header;
+  }
+
+  .page-team .page-hero {
+    padding-bottom: 2.9rem;
+  }
+
+  .page-home .page-home-hero__media {
+    grid-area: media;
     width: 100%;
     margin-top: 0.35rem;
     align-self: start;
   }
 
-  .page-team .page-hero {
-    padding-bottom: 2.9rem;
+  .page-home .page-home-hero__body {
+    grid-area: body;
   }
 
   .page-home .hero-media {
@@ -1474,7 +1522,7 @@ select {
     font-size: 1rem;
   }
 
-  .page-home .page-hero__media {
+  .page-home .page-home-hero__media {
     margin-top: 0.75rem;
   }
 
