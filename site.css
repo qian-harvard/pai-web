@@ -1375,13 +1375,26 @@ select {
     padding: 3.35rem 0 2.8rem;
   }
 
+  .page-home .page-hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-home .page-hero__media {
+    order: 2;
+    width: 100%;
+    margin-top: 0.35rem;
+    align-self: start;
+  }
+
   .page-team .page-hero {
     padding-bottom: 2.9rem;
   }
 
   .page-home .hero-media {
-    width: min(100%, 420px);
+    width: min(100%, 360px);
     margin-inline: auto;
+    min-height: 0;
   }
 
   .home-research-preview__intro {
@@ -1461,25 +1474,38 @@ select {
     font-size: 1rem;
   }
 
+  .page-home .page-hero__media {
+    margin-top: 0.75rem;
+  }
+
+  .page-home .hero-media {
+    width: min(100%, 320px);
+  }
+
   .page-team .page-hero__media .card {
     padding: 1.25rem;
   }
 
+  .page-team .person-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
   .page-team .person-card {
-    display: grid;
-    grid-template-columns: minmax(96px, 32vw) minmax(0, 1fr);
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
   }
 
   .page-team .person-card__photo {
-    height: 100%;
-    min-height: 172px;
-    aspect-ratio: auto;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 4.7;
   }
 
   .page-team .person-card__body {
-    padding: 1rem 1rem 1rem 0.95rem;
-    align-self: center;
+    padding: 1rem;
+    align-self: stretch;
   }
 
   .page-team .person-card__role {
