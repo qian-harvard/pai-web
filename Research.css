@@ -474,6 +474,15 @@
     border-color 0.32s ease;
 }
 
+.project-band__media[data-zoomable="true"] {
+  cursor: zoom-in;
+}
+
+.project-band__media[data-zoomable="true"]:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 5px;
+}
+
 .project-band:hover .project-band__media,
 .project-band:focus-within .project-band__media {
   transform: translateY(-4px);
@@ -498,6 +507,74 @@
   width: auto;
   max-width: 100%;
   max-height: 440px;
+}
+
+.research-lightbox {
+  width: min(94vw, 1400px);
+  max-width: 94vw;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.research-lightbox::backdrop {
+  background: rgba(11, 16, 23, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.research-lightbox__frame {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background: rgba(255, 253, 249, 0.98);
+  border: 1px solid rgba(22, 33, 43, 0.12);
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+.research-lightbox__close {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(22, 33, 43, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.research-lightbox__close:hover,
+.research-lightbox__close:focus-visible {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(165, 28, 48, 0.2);
+  color: var(--crimson-deep);
+}
+
+.research-lightbox__image-wrap {
+  display: grid;
+  place-items: center;
+  min-height: 0;
+}
+
+.research-lightbox__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(78vh, 920px);
+  height: auto;
+  object-fit: contain;
+}
+
+.research-lightbox__caption {
+  margin: 0;
+  text-align: center;
+  color: var(--slate);
 }
 
 @keyframes research-rise {
@@ -640,6 +717,20 @@
     width: 100%;
     justify-content: center;
   }
+
+  .research-lightbox {
+    width: min(96vw, 1400px);
+    max-width: 96vw;
+  }
+
+  .research-lightbox__frame {
+    border-radius: 24px;
+    padding: 0.9rem;
+  }
+
+  .research-lightbox__close {
+    width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -652,7 +743,8 @@
   .research-index__list a,
   .project-band__link,
   .project-band__media,
-  .project-band__media img {
+  .project-band__media img,
+  .research-lightbox__close {
     animation: none !important;
     transition: none !important;
   }

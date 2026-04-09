@@ -110,3 +110,115 @@ document.querySelectorAll("[data-newsletter-form]").forEach((form) => {
     }
   });
 });
+
+const initResearchLightbox = () => {
+  const page = document.querySelector(".page-research");
+
+  if (!page) {
+    return;
+  }
+
+  const figures = Array.from(page.querySelectorAll(".project-band__media"));
+
+  if (!figures.length) {
+    return;
+  }
+
+  const dialog = document.createElement("dialog");
+  dialog.className = "research-lightbox";
+  dialog.setAttribute("aria-label", "Expanded research figure");
+  dialog.innerHTML = `
+    <div class="research-lightbox__frame">
+      <button class="research-lightbox__close" type="button" aria-label="Close expanded figure">Close</button>
+      <div class="research-lightbox__image-wrap">
+        <img class="research-lightbox__image" alt="">
+      </div>
+      <p class="research-lightbox__caption" hidden></p>
+    </div>
+  `;
+
+  document.body.append(dialog);
+
+  const closeButton = dialog.querySelector(".research-lightbox__close");
+  const lightboxImage = dialog.querySelector(".research-lightbox__image");
+  const caption = dialog.querySelector(".research-lightbox__caption");
+
+  if (
+    typeof dialog.showModal !== "function" ||
+    !(closeButton instanceof HTMLButtonElement) ||
+    !(lightboxImage instanceof HTMLImageElement) ||
+    !(caption instanceof HTMLElement)
+  ) {
+    dialog.remove();
+    return;
+  }
+
+  let lastTrigger = null;
+
+  const closeLightbox = () => {
+    if (dialog.open) {
+      dialog.close();
+    }
+  };
+
+  const openLightbox = (figure, image) => {
+    lastTrigger = figure;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || "Expanded research figure";
+
+    if (image.alt) {
+      caption.hidden = false;
+      caption.textContent = image.alt;
+    } else {
+      caption.hidden = true;
+      caption.textContent = "";
+    }
+
+    dialog.showModal();
+  };
+
+  figures.forEach((figure) => {
+    const image = figure.querySelector("img");
+
+    if (!image) {
+      return;
+    }
+
+    figure.dataset.zoomable = "true";
+    figure.setAttribute("tabindex", "0");
+    figure.setAttribute("role", "button");
+    figure.setAttribute("aria-label", `Open larger view of figure: ${image.alt || "Research figure"}`);
+
+    figure.addEventListener("click", () => {
+      openLightbox(figure, image);
+    });
+
+    figure.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(figure, image);
+      }
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      closeLightbox();
+    }
+  });
+
+  dialog.addEventListener("close", () => {
+    lightboxImage.removeAttribute("src");
+    lightboxImage.alt = "";
+    caption.hidden = true;
+    caption.textContent = "";
+
+    if (lastTrigger instanceof HTMLElement) {
+      lastTrigger.focus();
+    }
+  });
+};
+
+initResearchLightbox();
