@@ -1548,6 +1548,9 @@ select {
   .page-team .person-card__photo {
     height: auto;
     min-height: 0;
+  }
+
+  .page-team .person-card__photo:not(.person-card__photo--faculty) {
     aspect-ratio: 4 / 4.7;
   }
 
