@@ -402,6 +402,10 @@ select {
   margin-inline: auto;
 }
 
+.media-frame--speaker-square {
+  max-width: 200px;
+}
+
 .media-frame--speaker-archive {
   max-width: 120px;
 }
@@ -568,7 +572,8 @@ select {
 }
 
 .section-title--featured-seminar {
-  max-width: 28ch;
+  font-size: clamp(1.85rem, 2.5vw, 2.6rem);
+  max-width: 34ch;
   line-height: 1.08;
 }
 
