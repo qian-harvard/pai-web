@@ -469,6 +469,10 @@ select {
   margin-bottom: 0;
 }
 
+.page-events .card > .button {
+  margin-top: 1.5rem;
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -1109,6 +1113,36 @@ select {
   align-items: start;
 }
 
+.home-event-callout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: end;
+  margin-top: 2rem;
+}
+
+.home-event-callout__copy {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.home-event-callout__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.2vw, 2.1rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.home-event-callout p {
+  margin: 0;
+}
+
+.home-event-callout__meta {
+  color: var(--slate);
+  font-weight: 700;
+}
+
 .home-research-preview__intro {
   display: grid;
   gap: 1rem;
@@ -1270,6 +1304,7 @@ select {
 
   .page-hero__grid,
   .home-research-preview,
+  .home-event-callout,
   .newsletter-inline__layout,
   .prose-columns,
   .card-grid--two,
@@ -1348,6 +1383,7 @@ select {
   }
 
   .home-research-preview__groups,
+  .home-event-callout,
   .newsletter-inline,
   .newsletter-inline__layout,
   .page-team .person-grid {
@@ -1520,6 +1556,10 @@ select {
   }
 
   .button-row > .button {
+    width: 100%;
+  }
+
+  .home-event-callout .button {
     width: 100%;
   }
 
