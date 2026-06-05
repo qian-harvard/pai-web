@@ -53,7 +53,14 @@ We introduced a plug-and-play inference routing algorithm for Mixture-of-Experts
 A resilient ML training runtime that eliminates the downtime and performance
 degradation caused by frequent interruptions by using standby machines, two-phase delta-based communication, and sandboxed shadow iterations. Trainmover achieves second-level migration recovery and 99% training efficiency.
 
-**6. Developing a power-aware MoE inference framework that dynamically adjusts software and hardware configurations to match the variations of power grid supply.**
+**6. PALS: Power-Aware LLM Serving for Mixture-of-Experts Models**
+[https://arxiv.org/abs/2605.21427](https://arxiv.org/abs/2605.21427)
+
+
+PALS treats GPU power caps as a runtime control, co-tuning power limits and serving
+settings to meet throughput targets while improving energy efficiency for dense and
+Mixture-of-Experts LLMs. This project is in collaboration with Can Hankendi and
+Ayse Coskun at Boston University.
 
 
 
@@ -204,6 +211,5 @@ development of new regulatory tools to incentivize increased grid flexibility an
 creation of more equitable cost-sharing mechanisms in the wake of expanding data
 center development. The brief concludes by outlining several critical questions which
 will guide the Project’s research over the next year.
-
 
 
