@@ -581,6 +581,47 @@ select {
   line-height: 1.08;
 }
 
+.seminar-feature {
+  max-width: 960px;
+}
+
+.seminar-feature__header {
+  display: grid;
+  gap: 1rem;
+}
+
+.seminar-feature .section-title {
+  max-width: 48ch;
+}
+
+.seminar-feature__speaker {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 1.75rem;
+}
+
+.seminar-feature__speaker img {
+  display: block;
+  width: 100px;
+  height: auto;
+  flex: 0 0 100px;
+  border-radius: var(--radius-sm);
+}
+
+.seminar-feature__speaker h3 {
+  margin: 0 0 0.4rem;
+}
+
+.seminar-feature__speaker p {
+  margin: 0;
+  color: var(--slate);
+}
+
+.seminar-feature__body p {
+  margin: 0 0 1rem;
+}
+
 .section-title--wide {
   max-width: none;
 }
