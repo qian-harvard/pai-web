@@ -585,6 +585,12 @@ select {
   max-width: 960px;
 }
 
+.seminar-feature + .seminar-feature {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
 .seminar-feature__header {
   display: grid;
   gap: 1rem;
