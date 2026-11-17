@@ -83,46 +83,48 @@
         <article class="seminar-feature">
           <header class="seminar-feature__header">
           <p class="section-kicker">Upcoming seminar</p>
-          <h2 class="section-title section-title--featured-seminar">Riding the AI Wave to Catalyze Power Grid Transformation</h2>
+          <h2 class="section-title section-title--featured-seminar">Two Scalable Distributed Strategies for Nonlinear Programming in Power Systems</h2>
           <div class="spotlight__meta">
-            <span>Thursday, October 22, 2026</span>
-            <span>10:00 am to 11:00 am</span>
-            <span>SEC 3.314</span>
+            <span>Monday, November 23, 2026</span>
+            <span>3:00 pm to 3:30 pm</span>
+            <span>SEC 3.301</span>
           </div>
           </header>
           <div class="seminar-feature__speaker">
-            <img src="images/junjie-qin.jpg" alt="Junjie Qin" width="178" height="232">
+            <img src="images/xinliang-dai.jpg" alt="Xinliang Dai" width="305" height="363">
             <div>
-              <h3><a href="https://engineering.purdue.edu/people/junjie.qin.1" target="_blank" rel="noopener noreferrer">Junjie Qin</a></h3>
-              <p>Assistant Professor<br>Purdue University</p>
+              <h3>Xinliang Dai</h3>
+              <p>Postdoctoral Research Associate<br>Princeton University</p>
             </div>
           </div>
           <div class="seminar-feature__body">
-          <p><strong>Abstract:</strong> Hyperscalers are racing to train ever larger models, and the electricity needed to power them is rising just as fast. The critical issue is timing: generation and transmission upgrades often take 5 to 10 years, while data centers can be built in a fraction of that time, making the grid an immediate bottleneck for scaling AI infrastructure. How can we unlock gigawatts of grid capacity on a much faster timeline while keeping electricity affordable for existing customers and long-term planning on track?</p>
-          <p>The first part of this talk focuses on accelerating large load interconnection via flexible connection programs that explicitly use load flexibility to advance energization. Focusing on partially measured distribution grids, where only some loads are metered and communicated in real time, I will discuss why such programs can unlock substantial grid hosting capacity while requiring only infrequent load interventions (e.g., ~1% annual curtailment). I will also show how a flexibility-aware notion of hosting capacity allows utilities to trade off load flexibility, sensing and communication, and asset upgrades. The second part surveys two related lines of work from my group: quantifying and limiting the impact of flexible connection on the wholesale prices paid by existing customers, and modeling the couplings between the grid and flexible load systems such as data centers and electric vehicles. Together, these tools and insights point to practical pathways for mobilizing near-term grid capacity while informing longer-horizon planning, market design, and policy.</p>
-          <p><strong>Speaker Bio:</strong> Junjie Qin is an Assistant Professor in the Elmore Family School of Electrical and Computer Engineering at Purdue University. Before joining Purdue, he was a postdoctoral researcher at the University of California, Berkeley. He obtained his Ph.D. degree in Computational and Mathematical Engineering from Stanford University, where he also received an M.S. degree in Civil and Environmental Engineering and an M.S. degree in Statistics. He received his undergraduate degrees from Tsinghua University, Beijing, China. His work was recognized by the NSF CAREER Award (2023), the Google Research Scholar Award (2022), the Stanford Satre Family Fellowship on Energy and Sustainability (2013-2016), and several best paper awards, including the Best Paper Award at ACM e-Energy (2026), the IEEE CSS Energy Systems Technical Committee Outstanding Student Paper Award (as advisor, 2023), and the O. Hugo Schuck Best Paper Award from the American Automatic Control Council (2020).</p>
+          <p><strong>Abstract:</strong> This presentation introduces two complementary strategies for nonconvex nonlinear programming in large-scale power systems, both exploiting the small interfaces between subsystems: condensing local information during the solve, via iterative distributed optimization, or before it, via non-iterative flexibility aggregation.</p>
+          <p>The first, Barrier ALADIN (BALADIN), embeds the Augmented Lagrangian-based Alternating Direction Inexact Newton method in an interior-point loop. It retains the full regional nonlinear models and coordinates parallel local barrier subproblems through Schur complement condensation of local KKT systems. On AC optimal power flow benchmarks with up to 193,000 buses, it is up to 5X faster than centralized IPOPT, with the largest gain on the most sparsely coupled case.</p>
+          <p>The second, flexibility aggregation, targets integrated transmission-distribution coordination. It replaces each distribution-system model with a compact predictor-corrector surrogate of its implicit feasible set in the coupling variables, which is locally cubic-order accurate and built independently across subsystems and time periods. Across 31 radial and meshed networks, it wrongly includes at most 0.82% and wrongly excludes at most 0.27% of sampled operating points, and 24-period coordination runs 6X faster end to end, via spatial-temporal decomposition.</p>
+          <p><strong>Speaker Bio:</strong> Xinliang Dai is a postdoctoral research associate in the Zero-carbon Energy Systems Research and Optimization Laboratory (ZERO Lab) at Princeton University, working with Prof. Jesse D. Jenkins. He received his B.Sc. from Jilin University, China, and his M.Sc. and Ph.D. from the Karlsruhe Institute of Technology (KIT), Germany. His research develops structure-exploiting optimization methods for the real-time operation and long-term planning of large-scale networked energy infrastructure. His current work includes graph-based distributed optimization, sensitivity-based methods for dimensionality reduction and network analysis, and GPU-accelerated computation that exploits repeated problem structure.</p>
           </div>
         </article>
         <article class="seminar-feature">
           <header class="seminar-feature__header">
           <p class="section-kicker">Upcoming seminar</p>
-          <h2 class="section-title section-title--featured-seminar">A Foundation Model for Power System Operations</h2>
+          <h2 class="section-title section-title--featured-seminar">Unlocking Industrial Flexibility for Power Systems</h2>
           <div class="spotlight__meta">
-            <span>Friday, October 23, 2026</span>
-            <span>9:30 am to 10:30 am</span>
-            <span>SEC 3.314</span>
+            <span>Monday, November 23, 2026</span>
+            <span>3:30 pm to 4:00 pm</span>
+            <span>SEC 3.301</span>
           </div>
           </header>
           <div class="seminar-feature__speaker">
-            <img src="images/baosen-zhang.jpg" alt="Baosen Zhang" width="149" height="148">
+            <img src="images/ruike-lyu.jpg" alt="Ruike Lyu" width="279" height="332">
             <div>
-              <h3><a href="https://zhangbaosen.github.io/" target="_blank" rel="noopener noreferrer">Baosen Zhang</a></h3>
-              <p>Associate Professor<br>University of Washington</p>
+              <h3>Ruike Lyu</h3>
+              <p>Postdoctoral Research Scientist<br>Columbia University</p>
             </div>
           </div>
           <div class="seminar-feature__body">
-          <p><strong>Abstract:</strong> Electric grids are becoming more dynamic and uncertain as we integrate renewable resources and increasingly large loads. Modern AI and machine learning tools have the potential to overcome the computational bottlenecks and maintain efficiency and reliability of the grid. However, such algorithms typically do not provide guarantees about stability or safety, making them difficult to implement in practice. In addition, they may require compute resources that are not available to grid operators. In this talk, I will describe how to bridge these gaps by introducing a physics-driven foundation model that can be applied to all grid topologies and load conditions. I will demonstrate how the construction of the model allows us to provide guarantees on hard constraints. I will show how it allows us to solve some difficult optimization problems and illustrate that more efficient operations can substantially reduce the high price of electricity many customers are currently facing.</p>
-          <p><strong>Speaker Bio:</strong> Baosen Zhang received his Bachelor degree in Engineering Science from the University of Toronto and his PhD degree in Electrical Engineering and Computer Sciences from University of California, Berkeley. He was a Postdoctoral Scholar at Stanford University. He is currently an Associate Professor in the Department of Electrical and Computer Engineering at the University of Washington, Seattle, and holds the Keith and Nancy Endowed Professorship. His research interests are in control, optimization and AI for power and energy systems. He received the NSF CAREER award as well as several best paper awards.</p>
+          <p><strong>Abstract:</strong> As power systems increasingly rely on renewable energy, balancing fluctuations in wind and solar generation requires greater flexibility on the demand side. Industrial facilities consume over 40% of the world&rsquo;s electricity and offer substantial flexibility through adjustments to production schedules. Yet unlocking this potential remains challenging: industrial processes involve complex operating constraints, equipment parameters are often proprietary, and detailed models of thousands of facilities are too computationally demanding for large-scale power-system optimization. How can we make industrial flexibility accessible to power systems without compromising the operational feasibility of industrial processes?</p>
+          <p>Our goal is to build a modeling and optimization framework that enables industrial loads to interact with power systems. First, I develop computationally efficient models that capture the physical constraints of industrial processes while enabling optimal production scheduling. Second, I introduce methods to identify industrial flexibility from externally measured electricity consumption, without requiring direct access to proprietary process parameters. Third, I develop dimension-reduction methods that translate detailed industrial constraints into compact flexibility representations suitable for aggregators and power-system optimization. Together, these methods bridge the gap between detailed industrial process operation and system-level decision-making, providing a practical pathway for making industrial demand flexibility a dependable resource in renewable-rich power systems.</p>
+          <p><strong>Speaker Bio:</strong> Ruike Lyu is currently a Postdoctoral Research Scientist at Columbia University, working with Prof. Bolun Xu. He received his B.E. and Ph.D. degrees in Electrical Engineering from Tsinghua University, Beijing, China, where he was advised by Prof. Chongqing Kang. He was one of two recipients of the Best Presentation Award at the 2025 IEEE PES Grid Edge Ph.D. Dissertation Challenge. From 2025 to 2026, he was a one-year Visiting Research Collaborator at Princeton University, working with Prof. Jesse Jenkins. His research focuses on the interaction between power systems and flexible industrial demand. He combines macro-energy systems optimization with engineering models of industrial processes to develop physically grounded, scalable representations of demand flexibility and assess and utilize the value of this flexibility for power-system planning and operations.</p>
           </div>
         </article>
       </div>
@@ -135,6 +137,41 @@
           <h2 class="section-title">Seminars from 2026</h2>
         </div>
         <div class="archive-list">
+          <details class="archive-item">
+            <summary class="archive-summary">
+              <span class="archive-summary__title">A Foundation Model for Power System Operations</span>
+              <span class="archive-meta">October 23, 2026 · 9:30 am to 10:30 am · SEC 3.314 · Baosen Zhang</span>
+            </summary>
+            <div class="archive-content">
+              <div class="archive-speaker">
+                <div class="media-frame media-frame--native-image media-frame--speaker-featured">
+                  <img src="images/baosen-zhang.jpg" alt="Baosen Zhang" width="149" height="148">
+                </div>
+                <div>
+                  <p><strong>Abstract:</strong> Electric grids are becoming more dynamic and uncertain as we integrate renewable resources and increasingly large loads. Modern AI and machine learning tools have the potential to overcome the computational bottlenecks and maintain efficiency and reliability of the grid. However, such algorithms typically do not provide guarantees about stability or safety, making them difficult to implement in practice. In addition, they may require compute resources that are not available to grid operators. In this talk, I will describe how to bridge these gaps by introducing a physics-driven foundation model that can be applied to all grid topologies and load conditions. I will demonstrate how the construction of the model allows us to provide guarantees on hard constraints. I will show how it allows us to solve some difficult optimization problems and illustrate that more efficient operations can substantially reduce the high price of electricity many customers are currently facing.</p>
+                  <p><strong>Speaker Bio:</strong> Baosen Zhang received his Bachelor degree in Engineering Science from the University of Toronto and his PhD degree in Electrical Engineering and Computer Sciences from University of California, Berkeley. He was a Postdoctoral Scholar at Stanford University. He is currently an Associate Professor in the Department of Electrical and Computer Engineering at the University of Washington, Seattle, and holds the Keith and Nancy Endowed Professorship. His research interests are in control, optimization and AI for power and energy systems. He received the NSF CAREER award as well as several best paper awards.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details class="archive-item">
+            <summary class="archive-summary">
+              <span class="archive-summary__title">Riding the AI Wave to Catalyze Power Grid Transformation</span>
+              <span class="archive-meta">October 22, 2026 · 10:00 am to 11:00 am · SEC 3.314 · Junjie Qin</span>
+            </summary>
+            <div class="archive-content">
+              <div class="archive-speaker">
+                <div class="media-frame media-frame--native-image media-frame--speaker-featured">
+                  <img src="images/junjie-qin.jpg" alt="Junjie Qin" width="178" height="232">
+                </div>
+                <div>
+                  <p><strong>Abstract:</strong> Hyperscalers are racing to train ever larger models, and the electricity needed to power them is rising just as fast. The critical issue is timing: generation and transmission upgrades often take 5 to 10 years, while data centers can be built in a fraction of that time, making the grid an immediate bottleneck for scaling AI infrastructure. How can we unlock gigawatts of grid capacity on a much faster timeline while keeping electricity affordable for existing customers and long-term planning on track?</p>
+                  <p>The first part of this talk focuses on accelerating large load interconnection via flexible connection programs that explicitly use load flexibility to advance energization. Focusing on partially measured distribution grids, where only some loads are metered and communicated in real time, I will discuss why such programs can unlock substantial grid hosting capacity while requiring only infrequent load interventions (e.g., ~1% annual curtailment). I will also show how a flexibility-aware notion of hosting capacity allows utilities to trade off load flexibility, sensing and communication, and asset upgrades. The second part surveys two related lines of work from my group: quantifying and limiting the impact of flexible connection on the wholesale prices paid by existing customers, and modeling the couplings between the grid and flexible load systems such as data centers and electric vehicles. Together, these tools and insights point to practical pathways for mobilizing near-term grid capacity while informing longer-horizon planning, market design, and policy.</p>
+                  <p><strong>Speaker Bio:</strong> Junjie Qin is an Assistant Professor in the Elmore Family School of Electrical and Computer Engineering at Purdue University. Before joining Purdue, he was a postdoctoral researcher at the University of California, Berkeley. He obtained his Ph.D. degree in Computational and Mathematical Engineering from Stanford University, where he also received an M.S. degree in Civil and Environmental Engineering and an M.S. degree in Statistics. He received his undergraduate degrees from Tsinghua University, Beijing, China. His work was recognized by the NSF CAREER Award (2023), the Google Research Scholar Award (2022), the Stanford Satre Family Fellowship on Energy and Sustainability (2013-2016), and several best paper awards, including the Best Paper Award at ACM e-Energy (2026), the IEEE CSS Energy Systems Technical Committee Outstanding Student Paper Award (as advisor, 2023), and the O. Hugo Schuck Best Paper Award from the American Automatic Control Council (2020).</p>
+                </div>
+              </div>
+            </div>
+          </details>
           <details class="archive-item">
             <summary class="archive-summary">
               <span class="archive-summary__title">Reliable ML for Sustainable Energy Systems</span>
